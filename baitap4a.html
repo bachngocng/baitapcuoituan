@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="a" placeholder="nhập a" value="">
+<button onclick="chuvi()" id="P" value="">Chu vi hình vuông</button>
+<button onclick="dientich()" id="S" value="">Diện tích hình vuông</button>
+<h3 id="chuvi"></h3>
+<h3 id="dientich"></h3>
+<script>
+    function chuvi() {
+        let a =document.getElementById("a").value;
+        let P = 4*a;
+        document.getElementById("chuvi").innerText = "Chu vi hình vuông là:" + P;
+    }
+    function dientich() {
+        let a = document.getElementById("a").value;
+        let S = a * a;
+        document.getElementById("dientich").innerText = "Diện tích hình vuông là:" + S;
+    }
+</script>
+</body>
+</html>

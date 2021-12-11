@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4C</title>
+</head>
+<body>
+<input type="number" id="year" placeholder="nhập vào năm?" value="">
+<button onclick="century()">Tính</button>
+<p id="ketqua"></p>
+<script>
+    function century() {
+        let year = parseInt(document.getElementById("year").value);
+        let theKy = parseInt(year / 100)
+        if (year % 100 === 0) {
+            document.getElementById("ketqua").innerHTML = "Năm " + year + " là thế kỷ " + theKy
+        } else {
+            document.getElementById("ketqua").innerHTML = "Năm " + year + " là thế kỷ " + parseInt(theKy + 1)
+        }
+    }
+</script>
+
+
+</body>
+</html>

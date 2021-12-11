@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập cuối tuần</title>
+</head>
+<body>
+<script>
+//1. Câu lệnh để hiển thị :
+alert("yourName")
+//2. Câu lệnh để nhận 1 giá trị từ 1 hộp thoại: prompt(")
+let x = parseInt(prompt("nhập số vào đây"));
+x = x * x;
+alert("Bình phương của số là" + x );
+//3.Câu lệnh để nhận vào giá trị của một ô input: value
+<input type="number" id="a" placeholder="nhập a" value="">
+<input type="number" id="b" placeholder="nhập b" value="">
+<button onClick="timS()" value="">S</button>
+<h1 id="S"></h1>
+<script>
+    function timS() {
+    let a= document.getElementById("a").value;
+    let b= document.getElementById("b").value;
+    let S= a * b;
+    document.getElementById("S").innerText ="kết quả là:" + S
+}
+</script>
+//4.
+
+</script>
+
+</body>
+</html>

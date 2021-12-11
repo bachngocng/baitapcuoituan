@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="a" placeholder="nhập a" value="">
+<input type="number" id="b" placeholder="nhập b" value="">
+<button  onClick="square1()" value="">Bình phương chính nó</button>
+<button  onClick="square2()" value="">Bình phương chính nó</button>
+<h1 id="S1"></h1>
+<h1 id="S2"></h1>
+<script>
+    function square1() {
+        let a = parseInt(document.getElementById("a").value);
+        let b = parseInt(document.getElementById("b").value);
+        let S1 = a**a;
+        document.getElementById("S1").innerText = "bình phương chính nó là:" + S1;
+    }
+    function square2() {
+        let a = parseInt(document.getElementById("a").value);
+        let b = parseInt(document.getElementById("b").value);
+        let S2 = a**b;
+        document.getElementById("S2").innerText = "bình phương a mũ b là: " + S2;
+    }
+
+</script>
+</body>
+</html>

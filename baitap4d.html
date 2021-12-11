@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4D</title>
+</head>
+<body>
+<input type="number" id="a" placeholder="nhập vào a" value="">
+<input type="number" id="b" placeholder="nhập vào b" value="">
+<input type="number" id="c" placeholder="nhập vào c" value="">
+<button onclick="kiemtra()" id="kiemtra" value="">Kiểm tra</button>
+<p id="ketqua"></p>
+<script>
+    //Phân tích: Các điều kiện cần:
+    //-điều kiện ban đầu a,b,c > 0
+    //-điều kiện để a,b,c là 3 cạnh của một tam giác: a+b>c;a+c>b;b+c>a
+    //-diều kiện tam giác cân: a=b hoặc a=c hoặc b=c
+    //-điều kiện tam giác đều: a=b=c
+    //-diều kiện tam giác vuông: a2 = b2 + c2 hoặc b2 = a2 + c2 hoặc c2 = a2 + b2
+    function kiemtra() {
+        let a = document.getElementById('a').value;
+        let b = document.getElementById('b').value;
+        let c = document.getElementById('c').value;
+        if ((a + b > c) && (a + c > b) && (b + c > a)) {
+            document.getElementById("ketqua").innerHTML = "a, b, c là 3 cạnh của một tam giác";
+        } else if ((a == b) || (b == c) || (c == a)) {
+            document.getElementById("ketqua").innerHTML = ("Đây là tam giác cân");
+        } else if ((a == b) && (b == c)) {
+            document.getElementById("ketqua").innerHTML = ("Đây là tam giác đều");
+        } else if ((a * a == b * b + c * c) || (b * b == a * a + c * c) || (c * c == b * b + a * a)) {
+            document.getElementById("ketqua").innerHTML = ("Đây là tam giác vuông");
+        } else {
+            document.getElementById("ketqua").innerHTML = ("Đây không phải là tam giác");
+        }
+    }
+</script>
+
+</body>
+</html>
